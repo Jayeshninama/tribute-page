@@ -1,0 +1,317 @@
+*{
+padding: 0;
+box-sizing: border-box;
+margin: 0;
+font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0c1022;
+}
+.box{
+    position: absolute;
+    top:20px;
+    width: 300px;
+    height: 400px;
+    background: transparent;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent,transparent, #f700ff);
+animation: animate 4s linear infinite;
+animation-delay: -2s;
+
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent,transparent, #00ccff);
+animation: animate 4s linear infinite;    
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.shadow{
+    position:absolute;
+    margin:0px auto 0;
+    width:calc(100% - 30px);
+    height:calc(100% + 5000px);
+    background: linear-gradient(0deg,#000,rgba(0, 0, 0, 0.75););
+
+}
+.shadow:before,.shadow:after{
+    content:"";
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+
+    height:calc(100% + 4px);
+    z-index:-1;
+  animation: animate2 20s linear infinite;
+  
+}
+.shadow:after{
+    filter: blur(20px);
+}
+@keyframes animate2 {
+    0%{
+        background-position: 0 0;
+    }
+    50%
+    {
+        background-position: 400% 0;
+    }
+    100%
+    {
+        background-position: 0 0;
+    }
+    
+}
+
+#r4{
+    height: calc(100% - 5px);
+    width: calc(100% - 5px);
+    border-radius: 20px;
+}
+#left{
+    left: 30%;
+    width:auto;
+}
+
+#left h1{
+
+    background-color: #000;
+    color: white;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    font-size: 40px;;
+}
+#left span{
+    position:absolute;
+    inset: 5px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0c1022;
+    flex-direction: column;
+    z-index: 1;
+    }
+    #left span h1{
+        color: rgb(6, 240, 248);
+        font-weight: bold;
+    }
+    .box span h1:hover{
+        text-shadow: 2px 5px 40px rgb(6, 240, 248),
+        2px 5px 40px rgb(6, 240, 248),
+        2px 2px 40px rgb(6, 240, 248),
+        2px 2px 40px rgb(6, 240, 248),
+        2px 2px 40px rgb(6, 240, 248);
+    }
+    .box2{
+        scroll-behavior: smooth;
+        position: absolute;
+        width: 400px;
+        height: 100px;
+        top:450px;
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+    }
+    .box2::after{
+        content: '';
+        position: absolute;
+        width: 3000px;
+        height: 2500px;
+        background-image: conic-gradient(transparent, transparent,transparent, #f700ff);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+    }
+    .box2::before{
+        content: '';
+        position: absolute;
+        width: 3000px;
+        height: 2500px;
+        background-image: conic-gradient(transparent, transparent,transparent, #00ccff);
+    animation: animate3 4s linear infinite;    
+    }
+    @keyframes animate3 {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .box2 span{
+    position:absolute;
+    inset: 5px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0c1022;
+    flex-direction: column;
+    z-index: 1;
+
+    }
+    .box2 span h1,.box2 span h2{
+        color: rgb(6, 240, 248);
+        font-weight: bold;
+    
+    }
+    .box2 span h1:hover{
+        text-shadow: 2px 5px 40px  #f700ff,
+        2px 5px 40px  #f700ff,
+        2px 2px 40px #f700ff,
+        2px 2px 40px  #f700ff,
+        2px 2px 40px  #f700ff;
+    }
+#about{
+    position: absolute;
+    top:1500px;
+    width: 1100px;
+    height: 1400px;
+
+}
+
+#info{
+    position: absolute;
+    top:600px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+
+
+}
+#info span{
+    border-radius: 50%;
+}
+
+
+.football_1{
+    position: absolute;
+    left:50%;
+    top:100%;
+    transform: :translate(-50%,-50%);
+    animation:bounce 4s infinite linear;
+
+}
+#info .football_1{
+    position: absolute;
+    left:44%;
+    top:43%;
+    transform: :translate(-50%,-50%);
+    animation:bounce1 4s infinite linear;
+
+}
+
+@keyframes bounce1{
+
+    from{
+        transform: rotate(0deg) translateX(350px) rotate(0deg);
+        
+    }
+    to{
+        transform: rotate(360deg) translateX(350px) rotate(360deg);
+      
+    }
+}
+.football_3,.football_3{
+    animation: rotation_3 2s infinite linear alternate-reverse;
+}
+@keyframes bounce{
+    0%{
+        top:0%;
+        left:0%;
+        transform: rotate(0deg);
+    } 50%{
+        top:100%;
+        left:0%;
+        transform: rotate(360deg);
+    }
+    51%{
+        top:100%;
+        left:91%;
+        transform: rotate(0deg);
+    }
+    100%{
+        top:0%;
+        left:91%;
+        transform: rotate(360deg);
+    }
+
+    from{
+        transform: rotate(0deg);
+        
+    }
+    to{
+        transform: rotate(360deg);
+      
+    }
+}
+@keyframes rotation_2{
+    from{
+        transform: rotate(0deg);
+        left:0;
+    }
+    to{
+        transform: rotate(360deg);
+        left:300px;
+    }
+}
+@keyframes rotation_3{
+    from{
+        transform: rotate(0deg);
+       
+    }
+    to{
+        transform: rotate(360deg);
+      
+    }
+}
+#content{
+    position: relative;
+    font-size: 20px;;
+}
+
+h4{
+    color:red;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 100;
+    left: 0;
+    padding: 1rem;
+    background-color: transparent;
+    text-align: center;
+    top:3000px;
+  }
